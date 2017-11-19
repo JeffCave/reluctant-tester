@@ -1,37 +1,14 @@
-## Welcome to GitHub Pages
+> but do you have any development experience?
 
-You can use the [editor on GitHub](https://github.com/JeffCave/reluctant-tester/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+After 10 years of system design, and development, working with customers across multiple industries, to see products through multiple iterations of vision to production, I had developed a series of proven, semi-automated, processes which guaranteed successful products, happy customers, and fast and reliable data systems, that were able to predict demand, and deliver business success; I found myself in an interview being faced with the statement: "I can see you have been a tester, but do you have any development experience?".
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+10 years of developing a process for developing rock solid platforms, and I had been labelled "just a tester".
 
-### Markdown
+It has taken me 5 years of working for multiple organizations in various industries, some with good practices, some with bad, most with a mixture of both, to realize what the misunderstanding was:
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+> Writing code is easy, getting it right is hard
 
-```markdown
-Syntax highlighted code block
+Good developers don't just create something and then hand it over to a user or an intern for testing; The really good developers adopt processes that reduce errors right from the get-go to help people avoid mistakes. Writing code is easy, getting it right is hard.
 
-# Header 1
-## Header 2
-### Header 3
+It is my intent to offer an entry level guide to what testing and validation is, why it is important, and what it means to a technical project. It is my intent to get small teams from zero to testing in as short a time as possible with as few barriers as possible; to give them a foundation on which to build.
 
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/JeffCave/reluctant-tester/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
