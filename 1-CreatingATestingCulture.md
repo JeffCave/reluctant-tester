@@ -1,5 +1,6 @@
-# 1. Creating a Testing Culture
-
+--------------
+Creating a Testing Culture
+--------------
 
 ## 1.1 - The Scientific Method
 
@@ -40,9 +41,15 @@ training to employees.
 
 ## Assumptions
 
-To a certain extent, when investigating processes, we have to assume a certain “happy” example. Rather than dealing with every single problem that exists in the world, we work to solve just one set of problems. 
+To a certain extent, when investigating processes, we have to assume 
+a certain “happy” example. Rather than dealing with every single 
+problem that exists in the world, we work to solve just one set of 
+problems. 
 
-Throughout this document certain assumptions are made regarding the processes and nature of the teams involved. While these assumptions are not necessarily true in any given environment, these assumptions are used to define the scope of this document. 
+Throughout this document certain assumptions are made regarding the 
+processes and nature of the teams involved. While these assumptions 
+are not necessarily true in any given environment, these assumptions 
+are used to define the scope of this document. 
 
 ### Software Systems
 
@@ -52,13 +59,13 @@ While much of what is discussed is relevant to Quality Control in general, this 
 
 For the most part this is not an issue, people take pride in their work, and are interested in making their company, their product, or their service better.
 
-Unfortunately, this is not 100% true. Some people just don’t care. If the people involved don’t care about the system they are building, there is nothing that can be done to improve the system. 
+Unfortunately, this is not 100% true. Some people just don't care. If the people involved don't care about the system they are building, there is nothing that can be done to improve the system. 
 
 Solving the disinterested employee problem is out of the scope of this discussion. For the purposes of this discussion, I am assuming that the people involved care.
 
-## What is a “Test”
+## What is a "Test"
 
-Tests are a measure of the system’s conformation with user expectations.
+Tests are a measure of the system's conformation with user expectations.
 
 This means that testing is a form of specification writing. The generation of a test is not an act unto itself, it is a part of the defining the scope of the system. 
 
@@ -171,6 +178,7 @@ It is possible that both are wrong.
 Given that both could be wrong, in a success case; it stands that either could be wrong in a disagreement case. There are three states: 
 
 |      | Pass           | Fail           |
+|------|----------------|----------------|
 | Pass | (/) Agree-Pass | (x) Disagree   |
 | Fail | (x) Disagree   | (?) Agree-Fail |
 
@@ -183,7 +191,7 @@ expectations have been met
  <dt>Disagree</dt>
   <dd>
 We don't know who is correct, but there needs to be further 
-discussion to determine what the customer’s expectations are. This 
+discussion to determine what the customer's expectations are. This 
 may be cleared up by a quick discussion (oops, missed something), or 
 could result in the entire project having to be redesigned due to a 
 flawed assumption. In either case, the underlying truth has been 
@@ -204,3 +212,223 @@ Developers must be aware of this ingrained response we have as
 humans, and fight it. Failing a test only means that there is a 
 difference of expectations, a misunderstanding. Testing exists to 
 find those misunderstandings.
+
+## Responsibility for Testing
+
+Generally, testing is viewed as a the Quality Assurance person's job, but that doesn't quite capture the essence of the relationship. While QA's primary tool is the test, the tests are the means to the end, rather than an end themselves. 
+
+If we look at any development process, developers always run their own code. They always check to see that it is working. Having a second set of eyes on it is important, but simply as part of being asked to solve a problem, they check to see that the problem is solved. This has been formalized, but it is important to recognize that the very definition of undertaking a task dictates a mechanism to determine that you have completed the task: a measure, or a Test. 
+
+This fundamental interpretation of taking action, indicates that “Testing” is part of developer's responsibility. If we have assumed that Testing is the Quality Assurance Department's responsibility and we have found that it is also the Development Department's responsibility, we need to ask who else is responsible that we haven't considered. 
+
+The answer is simple: everyone is a Tester, everyone is responsible for Testing. 
+
+Everyone has their area of expertise, and their area of expertise will create bias. This combination of bias and expertise means that some individuals are better at finding certain problems than others. We need to harness this range of expertise to maximize quality, while at the same time compensating for one another's biases. This “Peer Review” process is what keeps us from falling into biased patterns. 
+
+Every stage of the development process is responsible to ensure the system is working as expected, and it is everyone's responsibility to check one another's work. Well documented tests allow us to verify and validate one another's results, watching for mistakes that hide in our blind spots.
+
+## Key Phrases in Testing
+
+???
+
+## Cross-cutting Concerns
+
+Testing is *everybody's* business. Every aspect of production has an 
+interest in seeing that their role is performing as expected. People 
+will conduct tests to ensure that their part of the system is 
+performing as expected. 
+
+This is why formalized testing is not just the role of a QA 
+professional, nor should a QA professional be confined to the walls 
+of a "Testing" department. 
+
+### Organizational Structure Level 0: Putting the Cart Before the Horse
+
+This is the obvious, and usually first choice for management to 
+divide the organizational structure into. 
+
+Generally organizations will have the development department submit 
+their finished product to the testing department who will then queue 
+the work for testing. This unfortunately divides the two roles, and 
+creates a gap between them, reducing overall communication and 
+increasing the time lag between communication events when they 
+occur. 
+
+![](./images/image2.png)
+
+The steps taken become very disjointed:
+
+1. The developer assesses the expectations
+2. The developer implements those expectations
+3. The developer considers it “done” and puts it in Quality 
+   Assurance's inbox for testing
+4. Quality Assurance assesses the expectations
+5. Quality Assurance implements validation checks, some of which fail
+6. QA places the work back in Development's inbox, with the validation 
+   checks attached.
+7. Goto Step 1
+
+### Organizational Structure Level I: Having a Plan
+
+One obvious solution to the redundant effort noted is to place the 
+test definition prior to the production. By defining the validity 
+checks prior to the development process, developers do not risk 
+developing against faulty expectations. The expectations of success 
+are clearly defined prior to them writing the first line of code. 
+
+![](./images/image1.png)
+
+The drawback to this model is that as development occurs, new ideas 
+get discovered, new ways of looking at things become apparent. 
+Effectively, this is the waterfall method of development where 
+developers are told what they will produce, and have no mechanism 
+for offering feedback, except to put the item right back into the 
+tester's queue.
+
+### Organizational Structure Level III: Unity
+
+Rather a more vertical and integrated approach should be taken. In 
+the end, we are all on the same team. 
+
+![](./images/image2.png)
+
+With this configuration, the workflow is much tighter and the feedback generated by both QA and the Developers allows them to react to one another's suggestions immediately, reducing the need for massive adjustments later on. 
+
+Not only can the feedback cycle be reduced, experts are better able to learn from one another. When automating a test, who could be a better resource to ask for advice than a developer who sits across from you? 
+
+In fact, this is not limited to just the developers and the Testers. As the tests are implemented, feedback from the results may challenge the Business Analyst's expectation of the anticipated workflow. Why not bring them into the mix? How about Technical Writers? Surely code documentation could benefit from a professional editor and clearly written test summaries can influence the approach taken by a junior tester. 
+
+Every member of the team is responsible for every aspect of quality. 
+
+## Quality Assurance across departments</h2>
+
+At the very least, it is important for every member to have a basic understanding of the teams work in order to understand how to integrate and work together. 
+
+<table>
+ <tbody>
+  <tr>
+   <td></td>
+   <th>Tester</th>
+   <th>Dev</th>
+   <th>Analyst</th>
+   <th>Writer</th>
+   <th>more...</th>
+  </tr>
+  <tr> 
+   <th>Testing</th>
+   <td></td>
+   <td>Writes Automated tests</td>
+   <td></td>
+   <td></td>
+   <td></td>
+  </tr>
+  <tr> 
+   <th>Dev</th> 
+   <td></td>
+   <td></td>
+   <td>Debug Code/Interpret code capabilities</td>
+   <td></td>
+   <td></td>
+  </tr>
+  <tr>
+   <th>Analysis</th>
+   <td>Determine Dangerous System Usages</td>
+   <td>Implementation Decisions</td>
+   <td></td>
+   <td>Explain Need to Users</td>
+   <td></td>
+  </tr>
+  <tr>
+   <th>Writing</th>
+   <td>Defines Tests</td>
+   <td>Creates Documentation</td>
+   <td>Writes Need Assessments</td>
+   <td></td>
+   <td></td>
+  </tr>
+  <tr>
+   <th>more...</th>
+   <td></td>
+   <td></td>
+   <td></td>
+   <td></td>
+   <td></td>
+  </tr>
+ </tbody
+</table>
+
+No matter which department is handling an issue, validation, and evidence driven analysis improves quality. You can't make improvements unless you have evidence that something is behaving in an unexpected manner. You can't demand improvement unless you measure the deficiency.
+
+Quite often a System Analyst is expected to take a broad view of their system, and assure that it is behaving well from the customers point of view. However, this means testing the system across several areas of expertise that are generally assigned to specialized areas. Taking a system perspective, we can ask questions that span multiple areas of expertise to identify potential issues:
+
+### System Quality
+
+Infrastructure
+
+When investigating "System Quality", we are generally asking questions about the performance of the underlying system. A thousand little moving parts are associated with large systems, and each of them must perform to deliver the expected service. Many times a single failure of any part of underlying infrastructure that we take for granted can result in unexpected and catastrophic failures.
+
+Many years ago, a friend of mine was working an IT Help-desk. He was sitting in the break room when someone ran in and demanded "all hands on deck". The phones were suddenly backing up.
+
+Nobody was sure what had exactly happened, but all customers in the Texas area had lost their internet connectivity. It didn't matter whether they were business or personal, they were all phoning in at once. Details were a little sketchy, something to do with a squirrel, a power line, and a data junction. Known facts: fixed, dead squirrel, unhappy customers.
+
+What can we take away from this little story? Systems fail, unpredictably and unexpectedly. If you have begun wondering why a squirrel had access to the delicate area, you are missing the point. Remember the objective is not to ascribe blame, but to solve problems. Generally, it is not possible to predict how something is going to fail (if we could predict it, we would handle the scenario).
+
+Questions as simple as "Is the system available?" are highly critical to be monitoring.
+
+#### Frequency
+
+Tests like this should be run real-time. Depending on the system real-time could mean as infrequently as daily though could also mean as frequently as every millisecond. Naturally, the cost/benefit comparison needs to be considered of having real-time checking versus overloading the system with checks.
+
+#### Sample Questions
+
+As with most tests, it is best to ask the most generic question first and work down to most specific ones. To use the example of the squirrel and the power-line, asking "Has an armadillo chewed through the lines" is too specific, asking "has an animal chewed the power-lines" is better, asking "do we have power?" catches all the scenarios. The most general question we can ask is "Is the system available?"
+
+In a web based environment this is as simple as opening one of the web pages and will answer 99% of your "is it up" questions. Once we have answered this question there are many others that can help identify problems before they occur.
+
+* Is the system available?
+* Is the system responding in an acceptable time limit?
+
+There are much more detailed questions that could be asked, and often are by an infrastructure group
+
+* What percentage of RAM is the server consuming?
+* How much Hard drive space is remaining?
+* How much bandwidth is being consumed?
+
+Naturally, asking these questions is one thing. More importantly, someone has to be listening to the answers. No matter what question is asked it is important that individuals are notified when there is an unpleasant answer. This goes to transparency. Recently, I was involved in a situation where a colleague received an email from their manager, who had received an email from the infrastructure manager, who had received an email from an Infrastructure Analyst, who had received an email from a System Monitor: a hard-drive was nearly out of space. The total time from initial alert to finally getting the message to the person that could do something about it was 6 hours.
+
+If this system had a monitor that simply checked the speed at which forms loaded, my colleague would have been notified that *something* was wrong much earlier. While she may not have been aware of what the problem was, she would have initiated an investigation significantly earlier.
+
+The more eyes that are on a problem, the faster it gets solved. This is the principle of transparency
+
+Brainstorming ideas of monitors
+
+* things like alarms, monitors
+  * Ping the server every 5 minutes
+  * Web app? Check the front page. Did it load?
+  * Critical service? Is it loaded in memory and running? Did the 
+    time-stamp on the log change in a reasonable amount of time ago?
+* system scans for known issues are always useful. Sometimes you end 
+  up with a known bad data state. You understand what data causes the 
+  problem, you even know how to fix it when it occurs. For the life 
+  of you, you can't figure out how it gets that way. While you are 
+  investigating the root cause, why not run periodic system scans for 
+  the bad state. It would at least allow you to respond to problems 
+  much quicker.
+
+### Functional Behaviour
+
+* does it do what we expect it to do?
+* regression testing is important - when I change one thing, there is a risk of “bumping” other parts of the system
+
+### Business Expectations
+
+* are the specs meaningful?
+* we can test the specs by rewriting them
+
+## Standards Conformance
+
+* are all of the website's links valid?
+* are content authors using using effective keywords
+* spell-checking
+
+
