@@ -1,1 +1,24 @@
-theme: jekyll-theme-minimal
+######################
+# book (meta) info
+
+title: The Reluctant Tester
+author: 
+  name: Jeff Cave
+
+github:
+  url: "https://github.com/JeffCave/reluctant-tester"
+
+
+########
+# more settings
+
+collections:
+  chapters:
+      output: false
+
+sass:
+  sass_dir: css
+  style:    expanded
+
+exclude:
+- README.md

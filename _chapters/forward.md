@@ -1,3 +1,7 @@
+---
+title: Forward
+---
+
 Three months after writing this essay, I started a new position with 
 a governmental organization. Across from me sat a very clever fellow 
 whose role fell somewhere in project lead, software developer, or 
