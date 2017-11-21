@@ -30,9 +30,9 @@ sample content:
 > times before in various periods in the history of man. 
 > 
 > Richard P. Feynman 
-
---------------------------------------------------
-
+> 
+> ------------------------------------------------------------
+> 
 > The first principle is that you must not fool yourself 
 > and you are the easiest person to fool. 
 > 
