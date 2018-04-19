@@ -6,9 +6,13 @@ title: Creating a Testing Culture
 
 [https://www.youtube.com/watch?v=b240PGCMwV0]
 
+What is the Scientific Method?
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/SC_0Uw6hatk" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
 [http://www.mheducation.ca/school/products/9780070726024/mhr+discovering+science+7/]
 
-ScienceSkill 1 Organizing and Communicating Scientific Data
+### ScienceSkill 1 Organizing and Communicating Scientific Data
 
 [http://en.wikipedia.org/wiki/Scientific_method#Elements_of_the_scientific_method]
 
